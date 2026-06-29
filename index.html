@@ -1,100 +1,543 @@
 <!doctype html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A private, browser-only brand palette and identity system generator.">
-  <title>WordPalette App</title>
-  <link rel="icon" type="image/png" href="icon.png?v=1">
-  <link rel="apple-touch-icon" href="icon.png?v=1">
-  <link rel="stylesheet" href="styles.css?v=20260629-8">
-</head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <a class="brand-mark" href="#palette" aria-label="WordPalette App — Home">
-        <img class="brand-icon" src="icon.png?v=1" alt="">
-        <span class="brand-copy"><strong>WordPalette</strong><small>App</small></span>
-      </a>
-      <nav id="nav" aria-label="Workspace">
-        <a class="nav-item active" href="#palette" data-section="palette"><span>01</span><i data-i18n="navPalette">Palette</i></a>
-        <a class="nav-item" href="#naming" data-section="naming"><span>02</span><i data-i18n="navNaming">Naming</i></a>
-        <a class="nav-item" href="#slogan" data-section="slogan"><span>03</span><i data-i18n="navSlogan">Slogan</i></a>
-        <a class="nav-item" href="#fonts" data-section="fonts"><span>04</span><i data-i18n="navFonts">Fonts</i></a>
-        <a class="nav-item" href="#tokens" data-section="tokens"><span>05</span><i data-i18n="navTokens">Spacing & Shadows</i></a>
-        <a class="nav-item" href="#animations" data-section="animations"><span>06</span><i data-i18n="navAnimations">Animations</i></a>
-        <a class="nav-item" href="#moodboard" data-section="moodboard"><span>07</span><i data-i18n="navMoodboard">Moodboard</i></a>
-        <a class="nav-item" href="#logo" data-section="logo"><span>08</span><i data-i18n="navLogo">Logo Prompt</i></a>
-        <a class="nav-item" href="#brandbook" data-section="brandbook"><span>09</span><i data-i18n="navBrandbook">Brandbook</i></a>
-      </nav>
-      <div class="privacy-note"><span class="status-dot"></span><span data-i18n="privateNote">Private by design. Everything runs in your browser.</span></div>
-    </aside>
+<html
+	lang="en"
+	data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A private, browser-only brand palette and identity system generator." />
+		<title>WordPalette App</title>
+		<link
+			rel="icon"
+			type="image/png"
+			href="icon.png?v=1" />
+		<link
+			rel="apple-touch-icon"
+			href="icon.png?v=1" />
+		<link
+			rel="stylesheet"
+			href="styles.css?v=20260629-8" />
+	</head>
+	<body>
+		<div class="app-shell">
+			<aside
+				class="sidebar"
+				id="sidebar">
+				<a
+					class="brand-mark"
+					href="https://wordpalette.github.io"
+					aria-label="WordPalette App — Home">
+					<img
+						class="brand-icon"
+						src="icon.png?v=1"
+						alt="" />
+					<span class="brand-copy"><strong>WordPalette</strong><small>App</small></span>
+				</a>
+				<nav
+					id="nav"
+					aria-label="Workspace">
+					<a
+						class="nav-item active"
+						href="#palette"
+						data-section="palette"
+						><span>01</span><i data-i18n="navPalette">Palette</i></a
+					>
+					<a
+						class="nav-item"
+						href="#naming"
+						data-section="naming"
+						><span>02</span><i data-i18n="navNaming">Naming</i></a
+					>
+					<a
+						class="nav-item"
+						href="#slogan"
+						data-section="slogan"
+						><span>03</span><i data-i18n="navSlogan">Slogan</i></a
+					>
+					<a
+						class="nav-item"
+						href="#fonts"
+						data-section="fonts"
+						><span>04</span><i data-i18n="navFonts">Fonts</i></a
+					>
+					<a
+						class="nav-item"
+						href="#tokens"
+						data-section="tokens"
+						><span>05</span><i data-i18n="navTokens">Spacing & Shadows</i></a
+					>
+					<a
+						class="nav-item"
+						href="#animations"
+						data-section="animations"
+						><span>06</span><i data-i18n="navAnimations">Animations</i></a
+					>
+					<a
+						class="nav-item"
+						href="#moodboard"
+						data-section="moodboard"
+						><span>07</span><i data-i18n="navMoodboard">Moodboard</i></a
+					>
+					<a
+						class="nav-item"
+						href="#logo"
+						data-section="logo"
+						><span>08</span><i data-i18n="navLogo">Logo Prompt</i></a
+					>
+					<a
+						class="nav-item"
+						href="#brandbook"
+						data-section="brandbook"
+						><span>09</span><i data-i18n="navBrandbook">Brandbook</i></a
+					>
+				</nav>
+				<div class="privacy-note"
+					><span class="status-dot"></span
+					><span data-i18n="privateNote"
+						>Private by design. Everything runs in your browser.</span
+					></div
+				>
+			</aside>
 
-    <main class="workspace">
-      <header class="topbar">
-        <button class="icon-button mobile-menu" id="menuButton" aria-label="Menu">☰</button>
-        <div class="crumb"><span>WordPalette App</span><b>/</b><strong id="sectionTitle">Palette</strong></div>
-        <div class="top-actions">
-          <select class="language-select" id="languageSelect" aria-label="Language">
-            <option value="en">EN</option>
-            <option value="ru">RU</option>
-            <option value="es">ES</option>
-            <option value="fr">FR</option>
-            <option value="de">DE</option>
-            <option value="it">IT</option>
-            <option value="pt">PT</option>
-            <option value="zh">中文</option>
-            <option value="ja">日本語</option>
-            <option value="ar">AR</option>
-          </select>
-          <button class="icon-button" id="themeButton" aria-label="Toggle theme">◐</button>
-          <button class="primary compact" id="saveButton" data-i18n="save">Save</button>
-        </div>
-      </header>
+			<main class="workspace">
+				<header class="topbar">
+					<button
+						class="icon-button mobile-menu"
+						id="menuButton"
+						aria-label="Menu"
+						>☰</button
+					>
+					<div class="crumb"
+						><span>WordPalette App</span><b>/</b><strong id="sectionTitle">Palette</strong></div
+					>
+					<div class="top-actions">
+						<select
+							class="language-select"
+							id="languageSelect"
+							aria-label="Language">
+							<option value="en">EN</option>
+							<option value="ru">RU</option>
+							<option value="es">ES</option>
+							<option value="fr">FR</option>
+							<option value="de">DE</option>
+							<option value="it">IT</option>
+							<option value="pt">PT</option>
+							<option value="zh">中文</option>
+							<option value="ja">日本語</option>
+							<option value="ar">AR</option>
+						</select>
+						<button
+							class="icon-button"
+							id="themeButton"
+							aria-label="Toggle theme"
+							>◐</button
+						>
+						<button
+							class="primary compact"
+							id="saveButton"
+							data-i18n="save"
+							>Save</button
+						>
+					</div>
+				</header>
 
-      <div class="content">
-        <section class="view active" id="palette-view">
-          <div class="section-heading"><div><p class="eyebrow" data-i18n="step1">STEP 01 — FOUNDATION</p><h1 data-i18n="paletteTitle">Turn a feeling into color.</h1><p data-i18n="paletteSub">Enter a word or extract colors from an image. The same input always creates the same system.</p></div><span class="mood-pill" id="moodPill">CALM</span></div>
-          <div class="mode-tabs"><button class="active" data-mode="word" data-i18n="wordMode">Word to color</button><button data-mode="photo" data-i18n="photoMode">Photo to color</button></div>
-          <div id="wordPanel" class="generator-panel">
-            <label for="wordInput" data-i18n="wordLabel">Brand word or idea</label>
-            <div class="input-row"><input id="wordInput" value="Stillness" maxlength="50" autocomplete="off"><button class="primary" id="generateButton" data-i18n="generate">Generate system</button></div>
-            <div class="suggestions"><span data-i18n="tryLabel">Try:</span><button>Momentum</button><button>Solace</button><button>Orbit</button><button>Wildflower</button><button>Midnight</button></div>
-          </div>
-          <div id="photoPanel" class="generator-panel hidden">
-            <label class="upload-zone" for="photoInput"><input type="file" id="photoInput" accept="image/png,image/jpeg,image/webp"><span class="upload-icon">＋</span><b data-i18n="uploadTitle">Drop an image or choose a file</b><small data-i18n="uploadSub">PNG, JPG or WEBP. It never leaves your device.</small></label>
-            <canvas id="photoCanvas" width="200" height="200" hidden></canvas>
-          </div>
-          <div class="palette-meta"><div><span data-i18n="generatedPalette">Generated palette</span><strong id="paletteName">Stillness / Calm</strong></div><div class="inline-actions"><button class="secondary" id="regenerateButton" data-i18n="regenerate">Regenerate unlocked</button><button class="secondary" id="exportPalettePng" data-i18n="png">PNG</button></div></div>
-          <div class="swatch-grid" id="swatchGrid"></div>
-          <div class="harmony-row"><span data-i18n="harmony">Harmony</span><div id="harmonyButtons"></div></div>
-          <div class="history-block"><div class="block-title"><div><h2 data-i18n="history">Saved palettes</h2><p data-i18n="historySub">Stored only in this browser.</p></div><button class="text-button danger" id="clearHistory" data-i18n="clear">Clear all</button></div><div id="historyList" class="history-list"></div></div>
-        </section>
+				<div class="content">
+					<section
+						class="view active"
+						id="palette-view">
+						<div class="section-heading"
+							><div
+								><p
+									class="eyebrow"
+									data-i18n="step1"
+									>STEP 01 — FOUNDATION</p
+								><h1 data-i18n="paletteTitle">Turn a feeling into color.</h1
+								><p data-i18n="paletteSub"
+									>Enter a word or extract colors from an image. The same input always creates the
+									same system.</p
+								></div
+							></div
+						>
+						<div class="mode-tabs"
+							><button
+								class="active"
+								data-mode="word"
+								data-i18n="wordMode"
+								>Word to color</button
+							><button
+								data-mode="photo"
+								data-i18n="photoMode"
+								>Photo to color</button
+							></div
+						>
+						<div
+							id="wordPanel"
+							class="generator-panel">
+							<label
+								for="wordInput"
+								data-i18n="wordLabel"
+								>Brand word or idea</label
+							>
+							<div class="input-row"
+								><input
+									id="wordInput"
+									value="Stillness"
+									maxlength="50"
+									autocomplete="off" /><button
+									class="primary"
+									id="generateButton"
+									data-i18n="generate"
+									>Generate system</button
+								></div
+							>
+							<div class="suggestions"
+								><span data-i18n="tryLabel">Try:</span><button>Momentum</button
+								><button>Solace</button><button>Orbit</button><button>Wildflower</button
+								><button>Midnight</button></div
+							>
+						</div>
+						<div
+							id="photoPanel"
+							class="generator-panel hidden">
+							<label
+								class="upload-zone"
+								for="photoInput"
+								><input
+									type="file"
+									id="photoInput"
+									accept="image/png,image/jpeg,image/webp" /><span class="upload-icon">＋</span
+								><b data-i18n="uploadTitle">Drop an image or choose a file</b
+								><small data-i18n="uploadSub"
+									>PNG, JPG or WEBP. It never leaves your device.</small
+								></label
+							>
+							<canvas
+								id="photoCanvas"
+								width="200"
+								height="200"
+								hidden></canvas>
+						</div>
+						<div class="palette-meta"
+							><div
+								><span data-i18n="generatedPalette">Generated palette</span
+								><strong id="paletteName">Stillness / Calm</strong></div
+							><div class="inline-actions"
+								><button
+									class="secondary"
+									id="regenerateButton"
+									data-i18n="regenerate"
+									>Regenerate unlocked</button
+								><button
+									class="secondary"
+									id="exportPalettePng"
+									data-i18n="png"
+									>PNG</button
+								></div
+							></div
+						>
+						<div
+							class="swatch-grid"
+							id="swatchGrid"></div>
+						<div class="harmony-row"
+							><span data-i18n="harmony">Harmony</span><div id="harmonyButtons"></div
+						></div>
+						<div class="history-block"
+							><div class="block-title"
+								><div
+									><h2 data-i18n="history">Saved palettes</h2
+									><p data-i18n="historySub">Stored only in this browser.</p></div
+								><div class="inline-actions"
+									><button
+										class="secondary"
+										id="saveHistoryButton"
+										data-i18n="saveCurrent"
+										>Save current</button
+									><button
+										class="text-button danger"
+										id="clearHistory"
+										data-i18n="clear"
+										>Clear all</button
+									></div
+								></div
+							><div
+								id="historyList"
+								class="history-list"></div
+						></div>
+					</section>
 
-        <section class="view" id="naming-view"><div class="section-heading"><div><p class="eyebrow">STEP 02 — VOICE</p><h1 data-i18n="namingTitle">Names with the right temperature.</h1><p data-i18n="namingSub">Twenty deterministic ideas built from your word, mood and industry.</p></div><button class="primary" data-action="refresh-names" data-i18n="refresh">Refresh ideas</button></div><div class="control-strip"><label><span data-i18n="industry">Industry</span><select id="industrySelect"><option value="creative">Creative & design</option><option value="technology">Technology</option><option value="fashion">Fashion</option><option value="wellness">Wellness</option><option value="finance">Finance</option><option value="food">Food & hospitality</option></select></label></div><div class="idea-grid" id="namesGrid"></div></section>
+					<section
+						class="view"
+						id="naming-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 02 — VOICE</p
+								><h1 data-i18n="namingTitle">Names with the right temperature.</h1
+								><p data-i18n="namingSub"
+									>Twenty deterministic ideas built from your word, mood and industry.</p
+								></div
+							><button
+								class="primary"
+								data-action="refresh-names"
+								data-i18n="refresh"
+								>Refresh ideas</button
+							></div
+						><div class="control-strip"
+							><label
+								><span data-i18n="industry">Industry</span
+								><select id="industrySelect"
+									><option value="creative">Creative & design</option
+									><option value="technology">Technology</option
+									><option value="fashion">Fashion</option
+									><option value="wellness">Wellness</option
+									><option value="finance">Finance</option
+									><option value="food">Food & hospitality</option></select
+								></label
+							></div
+						><div
+							class="idea-grid"
+							id="namesGrid"></div
+					></section>
 
-        <section class="view" id="slogan-view"><div class="section-heading"><div><p class="eyebrow">STEP 03 — VOICE</p><h1 data-i18n="sloganTitle">Say it in one line.</h1><p data-i18n="sloganSub">Template-built slogans shaped by your current brand direction.</p></div><button class="primary" data-action="refresh-slogans" data-i18n="refresh">Refresh ideas</button></div><div class="list-stack" id="sloganList"></div></section>
+					<section
+						class="view"
+						id="slogan-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 03 — VOICE</p
+								><h1 data-i18n="sloganTitle">Say it in one line.</h1
+								><p data-i18n="sloganSub"
+									>Template-built slogans shaped by your current brand direction.</p
+								></div
+							><button
+								class="primary"
+								data-action="refresh-slogans"
+								data-i18n="refresh"
+								>Refresh ideas</button
+							></div
+						><div
+							class="list-stack"
+							id="sloganList"></div
+					></section>
 
-        <section class="view" id="fonts-view"><div class="section-heading"><div><p class="eyebrow">STEP 04 — TYPOGRAPHY</p><h1 data-i18n="fontsTitle">A voice you can see.</h1><p data-i18n="fontsSub">Browser-safe font pairings selected for the current mood.</p></div></div><div class="font-grid" id="fontGrid"></div></section>
+					<section
+						class="view"
+						id="fonts-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 04 — TYPOGRAPHY</p
+								><h1 data-i18n="fontsTitle">A voice you can see.</h1
+								><p data-i18n="fontsSub"
+									>Browser-safe font pairings selected for the current mood.</p
+								></div
+							></div
+						><div
+							class="font-grid"
+							id="fontGrid"></div
+					></section>
 
-        <section class="view" id="tokens-view"><div class="section-heading"><div><p class="eyebrow">STEP 05 — SYSTEM</p><h1 data-i18n="tokensTitle">Rhythm, shape and depth.</h1><p data-i18n="tokensSub">Practical interface tokens tuned to your brand mood.</p></div><button class="secondary" id="copyCssButton" data-i18n="copyCss">Copy CSS</button></div><div class="token-layout"><div class="token-card"><h3 data-i18n="spacing">Spacing scale</h3><div id="spacingScale"></div></div><div class="token-card"><h3 data-i18n="radius">Radius scale</h3><div id="radiusScale"></div></div><div class="token-card wide"><h3 data-i18n="shadows">Shadow presets</h3><div class="shadow-grid" id="shadowGrid"></div></div></div></section>
+					<section
+						class="view"
+						id="tokens-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 05 — SYSTEM</p
+								><h1 data-i18n="tokensTitle">Rhythm, shape and depth.</h1
+								><p data-i18n="tokensSub"
+									>Practical interface tokens tuned to your brand mood.</p
+								></div
+							><button
+								class="secondary"
+								id="copyCssButton"
+								data-i18n="copyCss"
+								>Copy CSS</button
+							></div
+						><div class="token-layout"
+							><div class="token-card"
+								><h3 data-i18n="spacing">Spacing scale</h3><div id="spacingScale"></div></div
+							><div class="token-card"
+								><h3 data-i18n="radius">Radius scale</h3><div id="radiusScale"></div></div
+							><div class="token-card wide"
+								><h3 data-i18n="shadows">Shadow presets</h3
+								><div
+									class="shadow-grid"
+									id="shadowGrid"></div></div></div
+					></section>
 
-        <section class="view" id="animations-view"><div class="section-heading"><div><p class="eyebrow">STEP 06 — MOTION</p><h1 data-i18n="animationsTitle">Motion with a point of view.</h1><p data-i18n="animationsSub">Preview and copy production-ready CSS animation presets.</p></div></div><div class="animation-grid" id="animationGrid"></div></section>
+					<section
+						class="view"
+						id="animations-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 06 — MOTION</p
+								><h1 data-i18n="animationsTitle">Motion with a point of view.</h1
+								><p data-i18n="animationsSub"
+									>Preview and copy production-ready CSS animation presets.</p
+								></div
+							></div
+						><div
+							class="animation-grid"
+							id="animationGrid"></div
+					></section>
 
-        <section class="view" id="moodboard-view"><div class="section-heading"><div><p class="eyebrow">STEP 07 — DIRECTION</p><h1 data-i18n="moodboardTitle">See the system together.</h1><p data-i18n="moodboardSub">A living composition generated from your palette, type and tokens.</p></div><button class="secondary" id="exportMoodboard" data-i18n="png">PNG</button></div><div class="moodboard" id="moodboard"></div></section>
+					<section
+						class="view"
+						id="moodboard-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 07 — DIRECTION</p
+								><h1 data-i18n="moodboardTitle">See the system together.</h1
+								><p data-i18n="moodboardSub"
+									>A living composition generated from your palette, type and tokens.</p
+								></div
+							><button
+								class="secondary"
+								id="exportMoodboard"
+								data-i18n="png"
+								>PNG</button
+							></div
+						><div
+							class="moodboard"
+							id="moodboard"></div
+					></section>
 
-        <section class="view" id="logo-view"><div class="section-heading"><div><p class="eyebrow">STEP 08 — MARK</p><h1 data-i18n="logoTitle">Build a better logo brief.</h1><p data-i18n="logoSub">A local template builder for image-generation tools and designers.</p></div></div><div class="logo-layout"><div class="form-card"><label><span data-i18n="brandName">Brand name</span><input id="brandNameInput" value="Stillness"></label><label><span data-i18n="style">Style</span><select id="logoStyle"><option>Minimal geometric</option><option>Elegant wordmark</option><option>Bold monogram</option><option>Organic symbol</option><option>Editorial emblem</option></select></label><label><span data-i18n="outputModel">Output model</span><select id="outputModel"><option>Generic</option><option>Midjourney</option><option>DALL-E</option><option>Stable Diffusion</option><option>Firefly</option></select></label><button class="primary" id="buildPrompt" data-i18n="buildPrompt">Build prompt</button></div><div class="prompt-card"><div class="block-title"><h3 data-i18n="prompt">Generated prompt</h3><button class="text-button" id="copyPrompt" data-i18n="copy">Copy</button></div><p id="promptOutput"></p><h4>Negative prompt</h4><p id="negativeOutput"></p></div></div></section>
+					<section
+						class="view"
+						id="logo-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 08 — MARK</p
+								><h1 data-i18n="logoTitle">Build a better logo brief.</h1
+								><p data-i18n="logoSub"
+									>A local template builder for image-generation tools and designers.</p
+								></div
+							></div
+						><div class="logo-layout"
+							><div class="form-card"
+								><label
+									><span data-i18n="brandName">Brand name</span
+									><input
+										id="brandNameInput"
+										value="Stillness" /></label
+								><label
+									><span data-i18n="style">Style</span
+									><select id="logoStyle"
+										><option>Minimal geometric</option
+										><option>Elegant wordmark</option
+										><option>Bold monogram</option
+										><option>Organic symbol</option
+										><option>Editorial emblem</option></select
+									></label
+								><label
+									><span data-i18n="outputModel">Output model</span
+									><select id="outputModel"
+										><option>Generic</option
+										><option>Midjourney</option
+										><option>DALL-E</option
+										><option>Stable Diffusion</option
+										><option>Firefly</option></select
+									></label
+								><button
+									class="primary"
+									id="buildPrompt"
+									data-i18n="buildPrompt"
+									>Build prompt</button
+								></div
+							><div class="prompt-card"
+								><div class="block-title"
+									><h3 data-i18n="prompt">Generated prompt</h3
+									><button
+										class="text-button"
+										id="copyPrompt"
+										data-i18n="copy"
+										>Copy</button
+									></div
+								><p id="promptOutput"></p><h4>Negative prompt</h4
+								><p id="negativeOutput"></p></div></div
+					></section>
 
-        <section class="view" id="brandbook-view"><div class="section-heading"><div><p class="eyebrow">STEP 09 — HANDOFF</p><h1 data-i18n="brandbookTitle">Your compact brandbook.</h1><p data-i18n="brandbookSub">Everything generated here, ready to export and build with.</p></div><div class="inline-actions"><button class="secondary" id="exportJson">JSON</button><button class="primary" id="exportBrandbookPng">PNG</button></div></div><div class="brandbook" id="brandbook"></div><div class="export-grid"><button data-export="css"><b>CSS Variables</b><span data-i18n="copyCode">Copy code</span></button><button data-export="tailwind"><b>Tailwind Tokens</b><span data-i18n="copyCode">Copy code</span></button><button data-export="figma"><b>Figma Tokens</b><span data-i18n="copyJson">Copy JSON</span></button></div></section>
-      </div>
-      <footer class="site-footer">
-        <div class="footer-brand"><a href="#palette" aria-label="WordPalette App — Home"><img class="footer-logo logo-light" src="logo.png?v=1" alt="WordPalette App"><img class="footer-logo logo-dark" src="logo-black.png?v=1" alt="WordPalette App"></a><p data-i18n="footerTagline">A local brand system generator for words, images and ideas.</p></div>
-        <div class="footer-note"><span class="status-dot"></span><p data-i18n="footerPrivacy">Everything stays on your device. No uploads, accounts or API keys.</p></div>
-        <div class="footer-links"><a href="#palette" data-i18n="navPalette">Palette</a><a href="#moodboard" data-i18n="navMoodboard">Moodboard</a><a href="#brandbook" data-i18n="navBrandbook">Brandbook</a><small>© 2026 WordPalette App</small></div>
-      </footer>
-    </main>
-  </div>
-  <div class="toast" id="toast" role="status"></div>
-  <script src="app.js?v=20260629-5"></script>
-</body>
+					<section
+						class="view"
+						id="brandbook-view"
+						><div class="section-heading"
+							><div
+								><p class="eyebrow">STEP 09 — HANDOFF</p
+								><h1 data-i18n="brandbookTitle">Your compact brandbook.</h1
+								><p data-i18n="brandbookSub"
+									>Everything generated here, ready to export and build with.</p
+								></div
+							><div class="inline-actions"
+								><button
+									class="secondary"
+									id="exportJson"
+									>JSON</button
+								><button
+									class="primary"
+									id="exportBrandbookPng"
+									>PNG</button
+								></div
+							></div
+						><div
+							class="brandbook"
+							id="brandbook"></div
+						><div class="export-grid"
+							><button data-export="css"
+								><b>CSS Variables</b><span data-i18n="copyCode">Copy code</span></button
+							><button data-export="tailwind"
+								><b>Tailwind Tokens</b><span data-i18n="copyCode">Copy code</span></button
+							><button data-export="figma"
+								><b>Figma Tokens</b><span data-i18n="copyJson">Copy JSON</span></button
+							></div
+						></section
+					>
+				</div>
+				<footer class="site-footer">
+					<div class="footer-brand"
+						><a
+							href="https://wordpalette.github.io"
+							aria-label="WordPalette App — Home"
+							><img
+								class="footer-logo logo-light"
+								src="logo.png?v=1"
+								alt="WordPalette App" /><img
+								class="footer-logo logo-dark"
+								src="logo-black.png?v=1"
+								alt="WordPalette App" /></a
+						><p data-i18n="footerTagline"
+							>A local brand system generator for words, images and ideas.</p
+						></div
+					>
+					<div class="footer-note"
+						><span class="status-dot"></span
+						><p data-i18n="footerPrivacy"
+							>Everything stays on your device. No uploads, accounts or API keys.</p
+						></div
+					>
+					<div class="footer-links"
+						><a
+							href="#palette"
+							data-i18n="navPalette"
+							>Palette</a
+						><a
+							href="#moodboard"
+							data-i18n="navMoodboard"
+							>Moodboard</a
+						><a
+							href="#brandbook"
+							data-i18n="navBrandbook"
+							>Brandbook</a
+						><small>© 2026 WordPalette App</small></div
+					>
+				</footer>
+			</main>
+		</div>
+		<div
+			class="toast"
+			id="toast"
+			role="status"></div>
+		<script src="app.js?v=20260629-7"></script>
+	</body>
 </html>
