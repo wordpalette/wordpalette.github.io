@@ -1,34 +1,90 @@
-# WordPalette App
+# WordPalette
 
-A fully static, browser-only brand system generator. A word or local image becomes a deterministic palette, naming territory, slogans, font pairing, design tokens, motion presets, a moodboard and a compact brandbook.
+Generate a complete mini brand system from a single word or image — fully in your browser.
 
-## Run locally
+![WordPalette screenshot](./screenshot.png)
 
-Open `index.html` directly in a modern browser. No install, build command, server, API key or account is required.
+## What is WordPalette?
 
-For the best clipboard behavior, you can optionally serve the folder locally:
+WordPalette is a free, static, browser-only brand identity generator. Enter a word, idea or upload
+an image, and the app creates a visual direction for your project: palette, naming ideas, slogans,
+typography, design tokens, animation presets, moodboard, logo prompt and compact brandbook.
 
-```powershell
-python -m http.server 8000
-```
+Everything runs locally on your device. There is no backend, no account, no API key and no image
+upload.
 
-Then visit `http://localhost:8000`.
+## Features
 
-## Deploy to GitHub Pages
+- Word-to-palette generator — create a deterministic color palette from a brand word or idea.
+- Image-to-palette extraction — upload an image and extract colors locally with Canvas.
+- Palette harmonies — switch between analogous, complementary, triadic, split complementary,
+  monochrome and neutral accent palettes.
+- Color locking — lock colors you like and regenerate only the unlocked colors.
+- Saved palettes — save palettes in your browser with `localStorage`.
+- Naming ideas — generate brand name ideas based on the current word, mood and industry.
+- Slogan generator — create short tagline ideas for the selected brand direction.
+- Font pairings — get browser-safe typography pairings matched to the current palette.
+- Design tokens — generate spacing, radius and shadow tokens for UI design.
+- Animation presets — preview and copy simple CSS animation snippets.
+- Moodboard — see the palette, typography and tokens together in a visual layout.
+- Logo prompt builder — generate a logo brief/prompt for designers or image-generation tools.
+- Brandbook — create a compact brandbook with colors, typography, slogans and naming ideas.
+- Exports — export PNG, JSON, CSS variables, Tailwind-style tokens and Figma token JSON.
+- Multi-language UI — supports English, Russian, Spanish, French, German, Italian, Portuguese,
+  Chinese, Japanese and Arabic.
+- Privacy-first — no uploads, accounts, analytics, external fonts or backend services.
 
-1. Push these files to a GitHub repository.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the repository's main branch and `/ (root)`, then save.
+## How to use
 
-## Privacy and architecture
+1. Open the app in your browser.
+2. Type a brand word or idea, for example `Stillness`, `Orbit`, `Momentum` or `Midnight`.
+3. Click **Generate system**.
+4. Review the generated palette.
+5. Use harmony buttons to change the color relationship.
+6. Lock colors you want to keep, then regenerate the rest if needed.
+7. Open the sidebar sections to explore:
+   - **Naming** for name ideas
+   - **Slogan** for taglines
+   - **Fonts** for typography
+   - **Spacing & Shadows** for design tokens
+   - **Animations** for CSS motion presets
+   - **Moodboard** for a visual preview
+   - **Logo Prompt** for a logo generation brief
+   - **Brandbook** for export-ready brand assets
+8. Click **Save** or **Save current** to store the palette locally in your browser.
+9. Export what you need as PNG, JSON, CSS, Tailwind tokens or Figma tokens.
 
-- Vanilla HTML, CSS and JavaScript only
-- No backend, API calls, analytics or external fonts
-- Word generation is deterministic and algorithmic
-- Names, slogans and prompts are template-based
-- Image analysis uses Canvas and k-means locally in the browser
-- Preferences and saved palettes use `localStorage`
-- PNG and JSON exports are generated on-device
+## Image palette mode
 
-Everything runs in your browser. No images or prompts are uploaded.
+You can also create a palette from an image:
+
+1. Open **Photo to color**.
+2. Choose a PNG, JPG or WEBP image.
+3. WordPalette extracts the main colors locally in the browser.
+4. The image never leaves your device.
+
+## Exports
+
+WordPalette can export:
+
+- Palette PNG
+- Moodboard PNG
+- Brandbook PNG
+- Brand system JSON
+- CSS variables
+- Tailwind-style token object
+- Figma-compatible token JSON
+
+## Privacy
+
+WordPalette is local-first:
+
+- No backend
+- No database
+- No account
+- No API keys
+- No analytics
+- No external fonts
+- No image uploads
+
+Generated palettes and saved history stay in your browser.
